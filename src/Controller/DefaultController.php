@@ -5,7 +5,6 @@ namespace App\Controller;
 
 
 use App\Exception\AppException;
-use App\Exception\DistributorsExistException;
 use App\Service\DistributorServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,11 +14,15 @@ class DefaultController extends AbstractController
 {
     /**
      * @Route("/")
+     * @param DistributorServiceInterface $distributorService
      * @return Response
      */
-    public function index()
+    public function index(DistributorServiceInterface $distributorService)
     {
-        return new Response('Heil, Hitl..., a mean..., Hello, World!');
+        return $this->render('index.html.twig', [
+            'title' => 'Distributors',
+            'distributors' => $distributorService->getAll(),
+        ]);
     }
 
     /**
