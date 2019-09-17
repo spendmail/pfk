@@ -14,15 +14,32 @@ class DefaultController extends AbstractController
 {
     /**
      * @Route("/")
+     * @return Response
+     */
+    public function index()
+    {
+        return $this->redirectToRoute("distributors");
+    }
+
+    /**
+     * @Route("/distributors", name="distributors")
      * @param DistributorServiceInterface $distributorService
      * @return Response
      */
-    public function index(DistributorServiceInterface $distributorService)
+    public function distributors(DistributorServiceInterface $distributorService): Response
     {
         return $this->render('index.html.twig', [
             'title' => 'Distributors',
             'distributors' => $distributorService->getAll(),
         ]);
+    }
+
+    /**
+     * @Route("/pharmacies", name="pharmacies")
+     */
+    public function pharmacies(): Response
+    {
+
     }
 
     /**
