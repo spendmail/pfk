@@ -32,19 +32,19 @@
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link {% if app.request.attributes.get('_route') == "distributors" %}active{% endif %}" href="{{ url("distributors") }}">
+                        <a class="nav-link {% if app.request.attributes.get('_route') == "distributor" %}active{% endif %}" href="{{ url("distributor") }}">
                             <span data-feather="users"></span>
                             Distributors
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if app.request.attributes.get('_route') == "pharmacies" %}active{% endif %}" href="{{ url("pharmacies") }}">
+                        <a class="nav-link {% if app.request.attributes.get('_route') == "pharmacy" %}active{% endif %}" href="{{ url("pharmacy") }}">
                             <span data-feather="home"></span>
                             Pharmacies
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if app.request.attributes.get('_route') == "products" %}active{% endif %}" href="{{ url("products") }}">
+                        <a class="nav-link {% if app.request.attributes.get('_route') == "product" %}active{% endif %}" href="{{ url("product") }}">
                             <span data-feather="shopping-cart"></span>
                             Products
                         </a>

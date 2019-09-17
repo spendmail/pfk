@@ -14,13 +14,15 @@
             </thead>
             <tbody>
 
-            {% for product in products %}
+            {% for distributor in distributors %}
                 <tr>
-                    <td>{{ product.getId }}</td>
-                    <td>{{ product.getName }}</td>
+                    <td>{{ distributor.getId }}</td>
+                    <td>{{ distributor.getName }}</td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
     </div>
+    <a class="btn btn-primary btn-xs btn-block" href="{{ url("distributor-add") }}" role="button">Add</a>
+
 {% endblock %}

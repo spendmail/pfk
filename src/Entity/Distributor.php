@@ -58,7 +58,7 @@ class Distributor
         $this->name = $name;
     }
 
-    public function __construct(int $id, string $name)
+    public function __construct(?int $id = null, string $name = "")
     {
         $this->id = $id;
 
