@@ -1,5 +1,14 @@
 # ЕЩЕ В РАЗРАБОТКЕ!
 
+# Чтобы запустить приложение
+ + git clone https://github.com/spendmail/pfk.git pfk
+ + cd pfk
+ + sudo docker-compose up -d --build
+ + sudo docker-compose run pfk composer install
+ + sudo docker-compose run pfk /var/www/pfk/bin/console doctrine:migrations:migrate
+ + Открыть в браузере http://localhost:8080
+ 
+
 # Тестовое задание
 
 ## Правила оформления результата
