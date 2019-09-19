@@ -6,6 +6,7 @@
  + sudo docker-compose up -d --build
  + sudo docker-compose run pfk composer install
  + sudo docker-compose run pfk /var/www/pfk/bin/console doctrine:migrations:migrate
+ + sudo docker-compose run pfk chmod -R 777 var/app.db
  + Открыть в браузере http://localhost:8080
  
 
